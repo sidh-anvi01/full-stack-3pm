@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h1>hello . value method </h1>
+
+
+<!-- <input type="text" name="" id="name">
+<input type="number" name="" id="number">
+
+<button onclick="check()">click</button> -->
+
+
+<input type="text" name="" id="password">
+<input type="text" name="" id="cPassword">
+<p id="para"></p>
+<button onclick="checkpassword()">check password</button>
+
+    <script>
+
+// function check(){
+//      name=document.getElementById("name").value 
+//     //  document.write(name)
+//     // alert(name)
+// if(!name){
+//     alert("this is rrquired")
+// }
+
+// }
+
+// function check(){
+//    num= document.getElementById("number").value 
+  
+//    if(!num){
+//     alert("pleease fill thr number")
+//    }
+
+// if(num%2==0){
+//     alert("number is even")
+// }
+
+// }
+
+
+function checkpassword(){
+  pass=  document.getElementById("password").value
+  cPass=  document.getElementById("cPassword").value
+
+if(!pass || !cPass){
+    document.getElementById("para").innerHTML="please fill the all fields " 
+    return false;
+}
+
+if(pass!=cPass){
+    // alert("password not macthed ")
+    document.getElementById("para").innerHTML="password not matched "
+    return false 
+}
+
+
+if(pass==cPass){
+    // alert("password not macthed ")
+    document.getElementById("para").innerHTML="password  matched "
+    return false 
+}
+
+
+
+return true 
+}
+
+    </script>
+    
+</body>
+</html>
