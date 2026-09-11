@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- task calculator  -->
+    <!-- <form action="">
+        <input type="text" name="display" id="">
+
+        <br>
+        <input type="button" value="ac"  onclick="display.value=' '" >
+        <input type="button" value="d" onclick="display.value=display.value.slice(0,-1)">
+        <input type="button" value="+" onclick="display.value+='+'">
+        <input type="button"  value="/">
+        <br>
+        <input type="button" value="1" onclick="display.value+='1'">
+        <input type="button" value="2" onclick="display.value+='2'">
+        <input type="button" value="3" onclick="display.value+='3'"> 
+        <input type="button" value="4" onclick="display.value+='4'">
+        <br>
+        <input type="button" value="=" onclick="display.value=eval(display.value)">
+        <input type="button">
+
+
+    </form> -->
+
+
+    <!-- youtube search results  -->
+<!-- <form action="https://www.youtube.com/results"> 
+<input type="text" name="search_query" id="" value="">
+<button>search</button>
+
+ <input type="but" name="" id="">
+</form> --> 
+
+
+
+<!-- <form action="">
+    <input type="text" value="">
+    <button>search</button>
+</form> -->
+
+
+
+<input type="text"  placeholder="entera task " id="list">
+<button onclick="addTask()">add task</button>
+
+
+<ol id="items">
+
+</ol>
+
+<li>hello </li>
+<script>
+
+function addTask(){
+
+let inputValue=document.getElementById("list").value 
+
+if(!inputValue){
+    alert("please enter the value ")
+}
+
+// creating the list item 
+let li =document.createElement("li")
+let textNode=document.createTextNode(inputValue)
+li.appendChild(textNode)
+
+
+// creating the d=edit button 
+let editbtn=document.createElement("button")
+editbtn.appendChild(document.createTextNode("edit "))
+
+editbtn.onclick=function(){
+    let newTask=prompt("enter the new task ")
+}
+
+li.appendChild(editbtn)
+
+
+// creating the delete button
+let delbtn=document.createElement("button")
+delbtn.appendChild(document.createTextNode("delete"))
+li.appendChild(delbtn)
+
+
+// final push in the ol list
+document.getElementById("items").appendChild(li)
+
+// kepp empty after push the list item 
+ document.getElementById("list").value=""
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
